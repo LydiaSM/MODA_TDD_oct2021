@@ -18,8 +18,7 @@ public class DictionaryTest {
     private List<String> liste;
 
     @BeforeEach
-    public void initialize()
-    {
+    public void initialize() {
         dict = new Dictionary("Example");
         liste = new ArrayList<>();
     }
@@ -51,5 +50,4 @@ public class DictionaryTest {
     public void fin() {
         dict = null;
     }
-
 }

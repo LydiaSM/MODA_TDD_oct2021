@@ -1,6 +1,5 @@
 package Dictionnaire;
 
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,7 +9,6 @@ public class Dictionary {
     private String name;
     private Map<String, String> translation;
     private HashMap<String, List<String>> translationMultiple;
-
 
     public Dictionary(String name) {
         this.name = "Example";
