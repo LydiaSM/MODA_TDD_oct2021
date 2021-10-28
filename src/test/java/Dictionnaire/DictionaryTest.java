@@ -1,15 +1,18 @@
 package Dictionnaire;
 
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-@Test
+
 public class DictionaryTest {
 
     private Dictionary dict;
 
-    public DictionaryTest()
+    @BeforeEach
+    public void setUp()
     {
         this.dict = new Dictionary();
     }
@@ -22,6 +25,12 @@ public class DictionaryTest {
     @Test
     public void testIsEmpty() {
         assertThat(dict.isEmpty(), equalTo(true));
+    }
+
+    @Test
+    public void testOneTranslation() {
+        dict.addTranslation("contre", "against");
+        assertThat(dict.getTranslation("contre"), equalTo("against"));
     }
 
 }
