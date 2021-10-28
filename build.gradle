@@ -5,8 +5,8 @@
 // pour data providers -> JUnit 4 + package en plus ou TestNG ou JUnit 5
 
 plugins {
-
     // application Java
+    id 'java'
     id 'application'
 
     // couverture
@@ -17,6 +17,9 @@ plugins {
 
 }
 
+group 'fr.upn'
+version '1.0-SNAPSHOT'
+
 sourceCompatibility = JavaVersion.VERSION_15
 targetCompatibility = JavaVersion.VERSION_15
 
@@ -25,10 +28,21 @@ repositories {
 }
 
 dependencies {
+    implementation 'junit:junit:4.13.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+    implementation 'org.testng:testng:7.1.0'
+
+    // TestNG
+    testImplementation 'org.testng:testng:7.4.0'
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+
     // Testing
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.mockito:mockito-core:3.12.4'
-    testImplementation 'org.hamcrest:hamcrest:2.2'
+    //testImplementation 'junit:junit:4.13.2'
+    //testImplementation 'org.mockito:mockito-core:3.12.4'
+    //testImplementation 'org.hamcrest:hamcrest:2.2'
     //  testImplementation 'com.tngtech.java:junit-dataprovider:1.13.1'
 
     implementation 'com.google.guava:guava:30.1.1-jre'
