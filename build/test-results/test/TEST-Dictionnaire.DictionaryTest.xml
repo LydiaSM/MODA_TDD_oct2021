@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Dictionnaire.DictionaryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-10-28T12:47:31" hostname="LAPTOP-FFG8DFAV" time="0.037">
-  <properties/>
-  <testcase name="testOneTranslation()" classname="Dictionnaire.DictionaryTest" time="0.03"/>
-  <testcase name="testDictionaryName()" classname="Dictionnaire.DictionaryTest" time="0.001"/>
-  <testcase name="testIsEmpty()" classname="Dictionnaire.DictionaryTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

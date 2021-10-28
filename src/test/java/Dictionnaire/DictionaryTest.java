@@ -35,6 +35,12 @@ public class DictionaryTest {
         assertThat(dict.getTranslation("contre"), equalTo("against"));
     }
 
+    /*@Test
+    public void testMultipleTranslation() {
+        dict.addMultipleTranslation("contre", list);
+        assertThat(dict.getTranslation("contre"), equalTo(list));
+    }*/
+
     @After
     public void fin()
     {
