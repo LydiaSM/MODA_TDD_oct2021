@@ -13,7 +13,7 @@ public class DictionaryTest {
 
     private Dictionary dict;
 
-    @Before
+    @BeforeEach
     public void initialize()
     {
         dict = new Dictionary("Example");
