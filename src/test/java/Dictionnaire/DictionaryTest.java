@@ -1,5 +1,7 @@
 package Dictionnaire;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,10 +13,10 @@ public class DictionaryTest {
 
     private Dictionary dict;
 
-    @BeforeEach
-    public void setUp()
+    @Before
+    public void initialize()
     {
-        this.dict = new Dictionary();
+        dict = new Dictionary("Example");
     }
 
     @Test
@@ -31,6 +33,12 @@ public class DictionaryTest {
     public void testOneTranslation() {
         dict.addTranslation("contre", "against");
         assertThat(dict.getTranslation("contre"), equalTo("against"));
+    }
+
+    @After
+    public void fin()
+    {
+        dict = null;
     }
 
 }

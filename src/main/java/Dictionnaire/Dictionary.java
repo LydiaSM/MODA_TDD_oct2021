@@ -9,7 +9,7 @@ public class Dictionary {
     private String name;
     private Map<String, String> translation;
 
-    public Dictionary() {
+    public Dictionary(String name) {
         this.name = "Example";
         this.translation = new HashMap<>();
     }
