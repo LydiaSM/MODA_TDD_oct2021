@@ -5,6 +5,9 @@ import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -12,11 +15,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class DictionaryTest {
 
     private Dictionary dict;
+    private List<String> liste;
 
     @BeforeEach
     public void initialize()
     {
         dict = new Dictionary("Example");
+        liste = new ArrayList<>();
     }
 
     @Test
@@ -35,15 +40,15 @@ public class DictionaryTest {
         assertThat(dict.getTranslation("contre"), equalTo("against"));
     }
 
-    /*@Test
+    @Test
     public void testMultipleTranslation() {
-        dict.addMultipleTranslation("contre", list);
-        assertThat(dict.getTranslation("contre"), equalTo(list));
-    }*/
+        liste.add("");
+        dict.addMultipleTranslation("contre", liste);
+        assertThat(dict.getMultipleTranslation("contre"), equalTo(liste));
+    }
 
     @After
-    public void fin()
-    {
+    public void fin() {
         dict = null;
     }
 

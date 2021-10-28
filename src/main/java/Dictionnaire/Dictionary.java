@@ -32,7 +32,8 @@ public class Dictionary {
 
     public void addTranslation(String contre ,String against){ translation.put(contre, against); }
 
-    //public List  getMultipleTranslation(String contre) {  return translationMultiple.get(contre); }
-    //public void addMultipleTranslation(String contre ,String against) { translationMultiple.put(contre, against); }
+    public List getMultipleTranslation(String contre) {  return translationMultiple.get(contre); }
+
+    public void addMultipleTranslation(String contre , List<String> against) { translationMultiple.put(contre, against); }
 
 }
