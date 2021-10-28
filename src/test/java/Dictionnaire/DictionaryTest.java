@@ -24,6 +24,4 @@ public class DictionaryTest {
         assertThat(dict.isEmpty(), equalTo(true));
     }
 
-
-
 }
