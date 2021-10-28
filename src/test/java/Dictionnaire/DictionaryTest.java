@@ -19,4 +19,11 @@ public class DictionaryTest {
         assertThat(dict.getName(), equalTo("Example"));
     }
 
+    @Test
+    public void testIsEmpty() {
+        assertThat(dict.isEmpty(), equalTo(true));
+    }
+
+
+
 }

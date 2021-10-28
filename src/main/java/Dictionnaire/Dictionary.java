@@ -5,15 +5,17 @@ public class Dictionary {
     private String name ;
 
     public Dictionary() {
-        this.name = "Exampleee";
+        this.name = "Example";
     }
+
     public String getName()
     {
         return this.name;
     }
-    public void setName(String name)
+
+    public boolean isEmpty()
     {
-        this.name = name;
+        return true;
     }
 
 }
